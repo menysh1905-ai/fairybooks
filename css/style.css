@@ -326,6 +326,21 @@ section {
     transform:translateX(-70px) rotate(16deg);
     z-index:2;
 }
+@media (max-width: 768px) {
+
+    .book-left {
+        transform: translateX(15px) rotate(-7deg) scale(0.75);
+    }
+
+    .book-center {
+        transform: translateY(-10px) scale(0.75);
+    }
+
+    .book-right {
+        transform: translateX(-15px) rotate(7deg) scale(0.75);
+    }
+
+}
 .hero-books img:hover{
     filter:brightness(1.08);
 
@@ -412,9 +427,11 @@ section {
     0% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(-12px);
     }
+
     100% {
         transform: translateY(0px);
     }
@@ -433,6 +450,8 @@ section {
     animation: floatBook 7s ease-in-out infinite;
     animation-delay: 1s;
 }
+
+
 /* ==========================
    ОТЗЫВЫ
 ========================== */
@@ -1060,4 +1079,39 @@ section.show{
     font-size: 18px;
     line-height: 1.6;
     color: #666;
+}
+/* ==========================
+   HERO BOOKS — MOBILE
+========================== */
+
+@media (max-width: 768px) {
+
+    .hero-books {
+        width: 100%;
+        max-width: 360px;
+        margin: 30px auto 0;
+        transform: none;
+    }
+
+    .hero-books img {
+    width: 125px;
+}
+
+    .book-left {
+    animation: floatBook 6s ease-in-out infinite;
+    transform: translateX(15px) rotate(-7deg) scale(0.75);
+}
+
+.book-center {
+    animation: floatBook 5s ease-in-out infinite;
+    animation-delay: .5s;
+    transform: translateY(-10px) scale(0.75);
+}
+
+.book-right {
+    animation: floatBook 7s ease-in-out infinite;
+    animation-delay: 1s;
+    transform: translateX(-15px) rotate(7deg) scale(0.75);
+}
+
 }
